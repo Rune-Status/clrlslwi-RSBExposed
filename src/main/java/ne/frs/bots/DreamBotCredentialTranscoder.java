@@ -27,9 +27,9 @@ public class DreamBotCredentialTranscoder {
      * @throws Exception If encoding the line fails.
      */
     public String encode(final String line) throws Exception {
-        Key v2 = generateKey();
+        Key key = generateKey();
         Cipher instance = Cipher.getInstance("AES");
-        instance.init(1, v2);
+        instance.init(Cipher.ENCRYPT_MODE, key);
         return new BASE64Encoder().encode(instance.doFinal(line.getBytes()));
     }
 
@@ -41,9 +41,9 @@ public class DreamBotCredentialTranscoder {
      * @throws Exception If decoding the line fails.
      */
     public String decode(String line) throws Exception {
-        Key v2 = generateKey();
+        Key key = generateKey();
         Cipher instance = Cipher.getInstance("AES");
-        instance.init(2, v2);
+        instance.init(Cipher.DECRYPT_MODE, key);
         return new String(instance.doFinal(new BASE64Decoder().decodeBuffer(line)));
     }
 
@@ -55,8 +55,8 @@ public class DreamBotCredentialTranscoder {
      * @throws Exception If generating the key fails.
      */
     private Key generateKey() throws Exception {
-        byte[] arrby = (userSpecificKey + "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA").substring(0, 16).getBytes();
-        return new SecretKeySpec(arrby, "AES");
+        byte[] key = (userSpecificKey + "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA").substring(0, 16).getBytes();
+        return new SecretKeySpec(key, "AES");
     }
 
     /**
