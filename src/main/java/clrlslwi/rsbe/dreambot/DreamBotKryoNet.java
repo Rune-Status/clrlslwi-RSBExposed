@@ -52,7 +52,7 @@ public class DreamBotKryoNet extends Listener {
     private void createClient() {
         com.esotericsoftware.minlog.Log.set(LEVEL_TRACE);
 
-        client = new Client();
+        client = new Client(60_000, 60_000);
         client.start();
         setupBindings(client.getKryo());
     }
