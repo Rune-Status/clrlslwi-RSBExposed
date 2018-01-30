@@ -1,4 +1,4 @@
-package ne.frs.bots;
+package clrlslwi.rsbe;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
