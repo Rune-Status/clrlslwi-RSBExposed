@@ -10,12 +10,15 @@ I will also be dumping research related to existing bot farms, bot technology, a
   
 More coming soon..  
   
-# Included
+# Features
 The end goal is having support for all bots. While I've already done this for the most part, the code
 is not quality enough to be open source IMHO.  
 
 ## DreamBot
-Hook parsing, and account file parsing are fully functional.
+DreamBot is mostly complete, and will not be actively updated.  
+* Hook decoding
+* Account file decoding
+* Client protocol emulation (SDN, tab count, etc.)
   
 ## ~~OSBot~~
 Complete, need to open-source.  
