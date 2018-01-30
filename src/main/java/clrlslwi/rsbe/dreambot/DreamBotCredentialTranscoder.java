@@ -1,4 +1,4 @@
-package clrlslwi.rsbe;
+package clrlslwi.rsbe.dreambot;
 
 import lombok.RequiredArgsConstructor;
 import sun.misc.BASE64Decoder;

@@ -1,5 +1,6 @@
-package clrlslwi.rsbe;
+package clrlslwi.rsbe.dreambot;
 
+import clrlslwi.rsbe.Symbol;
 import lombok.Data;
 
 /**

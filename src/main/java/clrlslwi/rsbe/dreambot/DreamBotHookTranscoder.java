@@ -1,4 +1,4 @@
-package clrlslwi.rsbe;
+package clrlslwi.rsbe.dreambot;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
@@ -57,6 +57,11 @@ public class DreamBotHookTranscoder {
                 currentType.setObfuscated(obfuscated);
                 log.log(Level.FINE, "Loaded new type " + refactored + " -> " + obfuscated);
             } else {
+                if (currentType == null) {
+                    log.log(Level.WARNING, "Field before type!");
+                    continue;
+                }
+
                 String[] segments = line.split(" ");
                 if (!segments[0].contains(".") || (segments.length != 3 && segments.length != 4)) {
                     log.log(Level.WARNING, "Unable to deal with line " + Arrays.toString(segments));

@@ -1,2 +1,4 @@
-rootProject.name = 'FuckRSBots'
+rootProject.name = 'RSBExposed'
+include 'DreamBot'
+include 'DreamBotKryo'
 
