@@ -78,6 +78,7 @@ public class DreamBotHookTranscoder {
                     field.setInverseKey(Long.parseLong(key));
                 }
 
+                currentType.addField(field);
                 log.log(Level.FINE, "     Loaded new field " + field.getRefactored() + " -> " + field.getObfuscated() + " ^ " + field.getInverseKey());
             }
         }
