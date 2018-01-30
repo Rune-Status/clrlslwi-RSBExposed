@@ -1,11 +1,11 @@
 This is a small recap of what packet bots in the modern age will get you on RS.
 
-Once upon a time in a land far away, a group of idiots discovered how to indirectly send RS packets without using the mouse. This
+Once upon a time in a land far away, a group of idiots discovered the mystical world of packets and how they work alongside RuneScape. This
 typically wouldn't be so significant in an MMO; the interesting part is a server artifact caused by not sending a mouse click packet.
 When you sent an interact packet of any sort (i.e. clicking an NPC), without the mouse part, it completely broke the server sided
 bot detection.
 
-This didn't last for long obviously. The bot developers released their bot, and Jagex monkeys managed to chain together some packet validation, along
+The exploit didn't last for long obviously. The bot developers released their bot, and Jagex monkeys managed to chain together some packet validation, along
 with insta-banning anyone who skipped the mouse click packet.
 
 And that's it! That's how my main with hundreds of hours got banned, and a little bit more insight into the packet bot landscape. Proceed
